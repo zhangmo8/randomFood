@@ -28,9 +28,13 @@ const prizes = computed(() => {
 function startCallback() {
   myLucky.value.play()
   setTimeout(() => {
-    const index = 0
+    const index = randomNumber()
     myLucky.value.stop(index)
-  }, 3000)
+  }, 2000)
+}
+
+function randomNumber() {
+  return Math.floor(Math.random() * foodSource.length) + 1
 }
 </script>
 
